@@ -48,4 +48,3 @@ Las pruebas en tiempo real demostraron la eficacia de la supervisión HITL. El s
 ```bash
 git clone [https://github.com/MrChayote/Percepcion-Semantica-de-un-agente-con-HITL.git](https://github.com/MrChayote/Percepcion-Semantica-de-un-agente-con-HITL.git)
 cd Percepcion-Semantica-de-un-agente-con-HITL
-pip install -r requirements.txt
