@@ -1,6 +1,9 @@
-from ultralytics import YOLOWorld
+from ultralytics import YOLO
 
-model = YOLOWorld("yolov8s-worldv2.pt")
+# Inicializamos el modelo alumno ultraligero YOLO11 Nano
+model = YOLO("yolo11n.pt")
+
+# Ejecutamos el Fine-Tuning Offline con los hiperparámetros de optimización
 results = model.train(
     data="HomeObjects-3K.yaml",     
     epochs=100,                        
@@ -8,7 +11,7 @@ results = model.train(
     batch=16,                          
     workers=8,                         
     device=0,                          
-    name="yolov8s_world_custom",
+    name="yolo11n_homeobjects_custom", # Nombre actualizado para el modelo especialista
     patience=50,                       
     optimizer="AdamW",                 
     lr0=0.01,                          
