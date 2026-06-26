@@ -30,7 +30,7 @@ El ecosistema del agente robótico está diseñado en tres fases principales:
    El dataset curado por el humano se utiliza para hacer *fine-tuning* sobre un modelo convolucional ultraligero (ej. YOLO11 Nano). Este modelo especialista reside en la memoria del robot, ejecutando inferencias en milisegundos sin el peso computacional del modelo fundacional original.
 
 ### Diagrama de Flujo
-![Arquitectura del Sistema](docs/arquitectura_fases.png)
+![Arquitectura del Sistema](datos/flujo.png)
 
 ## 🔬 Resultados Experimentales y Detección Zero-Shot
 
