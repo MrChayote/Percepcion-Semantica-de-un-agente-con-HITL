@@ -31,6 +31,23 @@ El ecosistema del agente robótico está diseñado en tres fases principales:
 ### Diagrama de Flujo
 ![Arquitectura del Sistema](docs/arquitectura_fases.png)
 
+## 🔬 Resultados Experimentales y Detección Zero-Shot
+
+Las pruebas en tiempo real demostraron la eficacia de la supervisión HITL. El sistema identificó exitosamente objetos anómalos. Además, la intervención del operador humano previno la degradación del conjunto de datos al descartar anomalías heurísticas (como confundir una figura de acción con un cocodrilo).
+
+### Galería del Bucle HITL en Acción
+
+| Validación Exitosa | Validación Exitosa |
+| :---: | :---: |
+| ![Control Xbox](docs/control-xbox.jpg)<br>*Detección de Xbox Controller (22%) validada por el usuario.* | ![Cocodrilo](docs/toy-crocodile.jpg)<br>*Detección de Toy Crocodile (11%) validada por el usuario.* |
+| ![Libro](docs/book.jpg)<br>*Detección de Book (53%) validada por el usuario.* | ![Falso Positivo Thanos](docs/thanos-falso.jpg)<br>*Falso positivo mitigado: Figura detectada erróneamente como Toy Crocodile (27%) y descartada por el humano.* |
+
+### Inferencia Abierta (Zero-Shot)
+
+| ![Katana](docs/katana.jpg) | ![Objetos Múltiples](docs/objetos-multiples.jpg) |
+| :---: | :---: |
+| *Detección de Katana Sword.* | *Evaluación en escenarios con múltiples objetos.* |
+
 ## 🚀 Instalación y Uso
 
 **1. Clonar el repositorio e instalar dependencias:**
