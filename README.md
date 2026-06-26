@@ -19,14 +19,7 @@ El ecosistema del agente robótico está diseñado en tres fases principales:
 1. **Fase 1: Etiquetado Interactivo (Implementado en `ia-video.py`)**
    El sistema captura el entorno mediante una cámara 2D. El modelo Zero-Shot evalúa la escena bajo descripciones de texto y solicita confirmación humana para extraer las coordenadas normalizadas del objeto.
 
-2. **Fase 2: Mapeo Espacial 3D (Teórico)**
-   Utilizando una cámara de profundidad (RGB-D), las coordenadas del Bounding Box 2D se proyectan al mundo real. Matemáticamente, la proyección se define como:
-   
-   $$[X_c, Y_c, Z_c]^T = Z \cdot K^{-1} [u, v, 1]^T$$
-   
-   Donde $K$ es la matriz intrínseca de la cámara, $Z$ es la profundidad y $(u, v)$ es el centroide del objeto detectado en el plano de la imagen.
-
-3. **Fase 3: Entrenamiento Offline Especializado (`train_homeobjects.py`)**
+2. **Fase 2: Entrenamiento Offline Especializado (`train_homeobjects.py`)**
    El dataset curado por el humano se utiliza para hacer *fine-tuning* sobre un modelo convolucional ultraligero (ej. YOLO11 Nano). Este modelo especialista reside en la memoria del robot, ejecutando inferencias en milisegundos sin el peso computacional del modelo fundacional original.
 
 ### Diagrama de Flujo
